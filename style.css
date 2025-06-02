@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.birthday-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.name-container::before,
+.name-container::after {
+    content: '❀';
+    position: absolute;
+    color: #ff6b6b;
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.name-container::before {
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.name-container::after {
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.first-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2s infinite;
+}
+
+.last-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 20px;
+}
+
+.last-name::before,
+.last-name::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6b6b);
+}
+
+.last-name::before {
+    left: -20px;
+}
+
+.last-name::after {
+    right: -20px;
+    transform: rotate(180deg);
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.date-container {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    padding: 10px 25px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.date {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-right: 10px;
+}
+
+.month {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.shayari-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.shayari {
+    background: linear-gradient(135deg, #fff5f5, #ffe3e3);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.radhey-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    letter-spacing: 5px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff6b6b;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff6b6b;
+    }
+}
+
+.wishes {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.wishes h3 {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.wishes p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 40px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.signature-line {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6b6b);
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+.signature-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.signature-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #ff6b6b;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6b6b;
+    transform: rotate(45deg);
+    animation: float 6s ease-in infinite;
+    opacity: 0.6;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6b6b;
+    border-radius: 50%;
+}
+
+.heart:before {
+    left: -10px;
+}
+
+.heart:after {
+    top: -10px;
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(45deg) translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: rotate(45deg) translateY(-20px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: rotate(45deg) translateY(-40px) scale(1);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .birthday-card {
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .first-name {
+        font-size: 3rem;
+    }
+    
+    .last-name {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+    }
+    
+    .date {
+        font-size: 2rem;
+    }
+    
+    .month {
+        font-size: 1.5rem;
+    }
+    
+    .radhey-text {
+        font-size: 3rem;
+    }
+    
+    .signature-name {
+        font-size: 1.5rem;
+    }
+    
+    .signature-text {
+        font-size: 1.3rem;
+    }
+} 
